@@ -1,5 +1,4 @@
 
-
 # Karle3, 2025-01-02, v2.1
 # https://github.com/Karle3/vfr-spickzettel
 
@@ -15,45 +14,45 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-FEET2METER = 0.3048;
+FEET2METER = 0.3048
 
-feet_min = 3000
-feet_max = 8000+500;
-feet_step = 500;
+FEET_MIN = 3000
+FEET_MAX = 8000+500
+FEET_STEP = 500
 
-meter_min =  500;
-meter_max = 2500;
-meter_step = 250;
+METER_MIN =  500
+METER_MAX = 2500
+METER_STEP = 250
 
-FEET_ALB_NORD = 4500;
-FEET_ALB_SUED = 7500;
+FEET_ALB_NORD = 4500
+FEET_ALB_SUED = 7500
 
 # plot, get figure and axes
 fig, ax = plt.subplots()
 
 
 # https://www.w3schools.com/python/python_while_loops.asp
-feet = feet_min;
-while feet <= feet_max:
-	meter = feet * FEET2METER;
-	if feet != FEET_ALB_NORD and feet != FEET_ALB_SUED :
-		ax.plot(feet, meter, 'go')
-	ax.annotate(f"_{meter:.0f} m", xy=(feet +50 , meter -10) )
-	feet += feet_step;
+feet = FEET_MIN
+while feet <= FEET_MAX:
+    meter = feet * FEET2METER
+    if feet != FEET_ALB_NORD and feet != FEET_ALB_SUED :
+        ax.plot(feet, meter, 'go')
+    ax.annotate(f"_{meter:.0f} m", xy=(feet +50 , meter -10) )
+    feet += FEET_STEP
 
-plt.axis((feet_min,feet_max,  meter_min,meter_max))
+plt.axis((FEET_MIN,FEET_MAX,  METER_MIN,METER_MAX))
 
 
 # plt.title('[m] = f([ft])')
 plt.title('Sektoren, EDDS, Luftraum D: [m] <==> [ft] ')
-plt.xlabel('feet');
-plt.ylabel('meter');
+plt.xlabel('feet')
+plt.ylabel('meter')
 
-plt.xticks(np.arange(feet_min, feet_max, 1000))
+plt.xticks(np.arange(FEET_MIN, FEET_MAX, 1000))
 
 
-plt.xticks(np.arange(feet_min,  feet_max,  feet_step))
-plt.yticks(np.arange(meter_min, meter_max, meter_step))
+plt.xticks(np.arange(FEET_MIN,  FEET_MAX,  FEET_STEP))
+plt.yticks(np.arange(METER_MIN, METER_MAX, METER_STEP))
 plt.grid(visible=True, which='both')
 # plt.minorticks_on(); --- kills ?ticks !!!
 
@@ -67,7 +66,8 @@ plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b^', label="45kFT_1368_Alb-
 
 
 # Alb-S/O__
-plt.annotate('_', xy=(FEET_ALB_SUED, 2280), xytext=(6500, 2280),
+Y_POS = FEET2METER  * FEET_ALB_SUED
+plt.annotate('_', xy=(FEET_ALB_SUED, Y_POS), xytext=(6500, Y_POS),
             arrowprops=dict(facecolor='red', shrink=0.05))
 
 # https://matplotlib.org/stable/gallery/text_labels_and_annotations/text_commands.html#sphx-glr-gallery-text-labels-and-annotations-text-commands-py
