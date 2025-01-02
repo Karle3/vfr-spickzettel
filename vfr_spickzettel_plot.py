@@ -1,11 +1,16 @@
 
 # =====================================================================
-# Karle3, 2025-01-02, v2.2
+# Karle3, 2025-01-02,
 # https://github.com/Karle3/vfr-spickzettel
 # =====================================================================
 
 """VFR Spickzettel (EDDS)."""
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+VERSION = "2.3"
+DATE    = "2025-01-02"
 
 # https://matplotlib.org/
 
@@ -13,8 +18,6 @@
 
 # https://matplotlib.org/stable/tutorials/pyplot.html#introduction-to-pyplot
 
-import numpy as np
-import matplotlib.pyplot as plt
 
 # --- Global Constants:
 FEET2METER = 0.3048
@@ -97,12 +100,13 @@ plt.text(4000, 600, '\
         bbox={'facecolor': 'lightgreen', 'alpha': 0.8, 'pad': 2})
 
 
+VER_STR = f"Karle3: v{VERSION:s}, {DATE:s}, www.edpj.de, \
+ \nhttps://github.com/Karle3/vfr-spickzettel"
 plt.text(8500, 600, \
-	'Karle3: v2.2, 2025-01, www.edpj.de, \
-	\nhttps://github.com/Karle3/vfr-spickzettel',
-	rotation=90,
-	bbox={ 'pad': 5 }
-	)
+VER_STR,
+ rotation=90,
+ bbox={ 'pad': 5 }
+)
 
 
 
