@@ -1,7 +1,10 @@
 
-# Karle3, 2025-01-02, v2.1
+# =====================================================================
+# Karle3, 2025-01-02, v2.2
 # https://github.com/Karle3/vfr-spickzettel
+# =====================================================================
 
+"""VFR Speickzettel."""
 
 
 # https://matplotlib.org/
@@ -90,10 +93,12 @@ plt.text(4000, 600, '\
         bbox={'facecolor': 'lightgreen', 'alpha': 0.8, 'pad': 2})
 
 
-plt.text(8500, 600, 'Karle3: v2.1, 2025-01, www.edpj.de',
-		 rotation=90,
-		 bbox={ 'pad': 5 }
-		 )
+plt.text(8500, 600, \
+	'Karle3: v2.2, 2025-01, www.edpj.de, \
+	\nhttps://github.com/Karle3/vfr-spickzettel',
+	rotation=90,
+	bbox={ 'pad': 5 }
+	)
 
 
 
