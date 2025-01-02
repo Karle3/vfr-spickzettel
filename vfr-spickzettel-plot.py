@@ -1,5 +1,10 @@
 
 
+# Karle3, 2025-01-02, v2.1
+# https://github.com/Karle3/vfr-spickzettel
+
+
+
 # https://matplotlib.org/
 
 # https://matplotlib.org/stable/plot_types/basic/scatter_plot.html#sphx-glr-plot-types-basic-scatter-plot-py
@@ -9,7 +14,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-feet2meter = 0.3048;
+
+FEET2METER = 0.3048;
 
 feet_min = 3000
 feet_max = 8000+500;
@@ -19,24 +25,19 @@ meter_min =  500;
 meter_max = 2500;
 meter_step = 250;
 
+FEET_ALB_NORD = 4500;
+FEET_ALB_SUED = 7500;
 
 # plot, get figure and axes
 fig, ax = plt.subplots()
 
-# --- ax.plot( (1,2) , (2,2) , 'x', markeredgewidth=2)
-
-
-# plt.plot([3000, 4000, 5000, 6000], [500, 600, 700, 800], 'ro')
-# plt.plot([3500, 4500, 5500, 6500], [550, 650, 750, 850], 'bx')
 
 # https://www.w3schools.com/python/python_while_loops.asp
 feet = feet_min;
 while feet <= feet_max:
-	meter = feet*feet2meter;
-	if feet != 4500 and feet != 7500 :
+	meter = feet * FEET2METER;
+	if feet != FEET_ALB_NORD and feet != FEET_ALB_SUED :
 		ax.plot(feet, meter, 'go')
-	# str_fmt = "__{:d}"
-	# str_fmt.format(meter)
 	ax.annotate(f"_{meter:.0f} m", xy=(feet +50 , meter -10) )
 	feet += feet_step;
 
@@ -59,35 +60,25 @@ plt.grid(visible=True, which='both')
 
 # Sektoren
 # https://matplotlib.org/stable/gallery/lines_bars_and_markers/categorical_variables.html#sphx-glr-gallery-lines-bars-and-markers-categorical-variables-py
-plt.plot(7500, 2280, 'r^', label="75kFT_2280m_Alb-Süd/Ost")
-plt.plot(4500, 1368, 'b^', label="45kFT_1368_Alb-Nord")
+plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r^', label="75kFT_2280m_Alb-Süd/Ost")
+plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b^', label="45kFT_1368_Alb-Nord")
 # show labels in a legend
 # plt.legend()
 
-#  https://matplotlib.org/stable/users/explain/quick_start.html#labelling-plots
-# _Alb-Nord
-# plt.annotate('_', xy=(4500+620, 1368), xytext=(6000, 1368),
-#            arrowprops=dict(facecolor='blue', shrink=0.05))  # black
-# ax.annotate("_Alb-Nord_", xy=(4500+900, 1368) )
 
 # Alb-S/O__
-plt.annotate('_', xy=(7500, 2280), xytext=(6500, 2280),
+plt.annotate('_', xy=(FEET_ALB_SUED, 2280), xytext=(6500, 2280),
             arrowprops=dict(facecolor='red', shrink=0.05))
 
 # https://matplotlib.org/stable/gallery/text_labels_and_annotations/text_commands.html#sphx-glr-gallery-text-labels-and-annotations-text-commands-py
 plt.text(5400, 1250, 'Alb-Nord:  \n 4500 ft = 1372 m',
 		fontsize=12,
-        bbox={'facecolor': 'blue', 'alpha': 0.2, 'pad': 5})
+        bbox={'facecolor': 'blue', 'alpha': 0.2, 'pad': 3})
 #     style='italic',    bbox={'facecolor': 'blue', 'alpha': 0.5, 'pad': 0})
 
 plt.text(3500, 2000, 'Alb-Süd/Ost/West\nSchwarzwald/Hornberg:\n FL75 = 2286 m \n (@1013,25hPa)',
 		fontsize=15,
-        bbox={'facecolor': 'red', 'alpha': 0.2, 'pad': 5})
-
-# plt.text(3500, 600,
-#		'- RMZ: Ein/AusFlug melden (statt Luftraum F) \n- BordBord: 122.540/555; 130.430; 130.740(R9)',
-#		fontsize=12,
-#        bbox={'facecolor': 'green', 'alpha': 0.2, 'pad': 2})
+        bbox={'facecolor': 'red', 'alpha': 0.2, 'pad': 3})
 
 # ; 130.740(R9)
 plt.text(4000, 600, '\
