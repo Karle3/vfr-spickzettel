@@ -169,3 +169,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# =============== Karle3
+vfr-spickzettel.*
+x.txt
+*.bak
+vfr*.html
+
