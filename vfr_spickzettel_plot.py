@@ -9,8 +9,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-VERSION = "2.3"
-DATE    = "2025-01-02"
+VERSION = "2.4"
+DATE    = "2025-01-03"
 
 # https://matplotlib.org/
 
@@ -68,8 +68,9 @@ plt.grid(visible=True, which='both')
 
 # Sektoren
 # https://matplotlib.org/stable/gallery/lines_bars_and_markers/categorical_variables.html#sphx-glr-gallery-lines-bars-and-markers-categorical-variables-py
-plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r^', label="75kFT_2280m_Alb-Süd/Ost")
-plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b^', label="45kFT_1368_Alb-Nord")
+# https://www.w3schools.com/python/matplotlib_markers.asp
+plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r>', label="75kFT_2280m_Alb-Süd/Ost")
+plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b>', label="45kFT_1368_Alb-Nord")
 # show labels in a legend
 # plt.legend()
 
