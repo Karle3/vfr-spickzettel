@@ -36,15 +36,15 @@ fig, ax = plt.subplots()
 
 # https://www.w3schools.com/python/python_while_loops.asp
 """ Loop over abszizza (in feet unit) to calulate resulting value in meter units: """
-feet = FEET_MIN
-while feet <= FEET_MAX:
-    meter = feet * FEET2METER
-    if feet not in (FEET_ALB_NORD, FEET_ALB_SUED) :
+FEET = FEET_MIN
+while FEET <= FEET_MAX:
+    METER = FEET * FEET2METER
+    if FEET not in (FEET_ALB_NORD, FEET_ALB_SUED) :
         # instead feet != FEET_ALB_NORD and feet != FEET_ALB_SUED :
-        ax.plot(feet, meter, 'go')
+        ax.plot(FEET, METER, 'go')
     # --- Annote value pairs in diagram.
-    ax.annotate(f"_{meter:.0f} m", xy=(feet +50 , meter -10) )
-    feet += FEET_STEP
+    ax.annotate(f"_{METER:.0f} m", xy=(FEET +50 , METER -10) )
+    FEET += FEET_STEP
 
 plt.axis((FEET_MIN,FEET_MAX,  METER_MIN,METER_MAX))
 
