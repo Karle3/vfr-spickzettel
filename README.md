@@ -16,3 +16,7 @@ For details refer to [Arbeitkreis Sektoren](https://www.bwlv.de/verband-service/
 ## Run Script
 
 Running `vfr_spickzettel_plot.py` will create diagrams as 'vfr-spickzettel' in PNG, PDF, and SVG-format.
+
+## Example
+
+![vfr-spickzettel.png](vfr-spickzettel.png)
