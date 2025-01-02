@@ -1,9 +1,9 @@
 # vfr-spickzettel
-A cheat sheet for glider pilots flying near Stuttgart airport (EDDS), considering glider sectors.
+A cheat sheet for glider pilots flying near Stuttgart airport ([EDDS](https://en.wikipedia.org/wiki/Stuttgart_Airport)), considering glider sectors.
 
 ## Links
 
-For details refer to [Arbeitkreis Sektoren](https://www.bwlv.de/verband-service/ak-sektoren).
+For details refer to [Arbeitskreis Sektoren](https://www.bwlv.de/verband-service/ak-sektoren).
 
 ## Dependencies
 
