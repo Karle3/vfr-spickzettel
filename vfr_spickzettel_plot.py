@@ -44,9 +44,11 @@ while FEET <= FEET_MAX:
     METER = FEET * FEET2METER
     if FEET not in (FEET_ALB_NORD, FEET_ALB_SUED) :
         # instead feet != FEET_ALB_NORD and feet != FEET_ALB_SUED :
-        ax.plot(FEET, METER, 'go')
+        #                     vv green circle
+        #                     ||    vv marker size
+        ax.plot(FEET, METER, 'go',  ms = 8)
     # --- Annote value pairs in diagram.
-    ax.annotate(f"_{METER:.0f} m", xy=(FEET +50 , METER -10) )
+    ax.annotate(f"_{METER:.0f} m", xy=(FEET +80 , METER -5) )
     FEET += FEET_STEP
 
 plt.axis((FEET_MIN,FEET_MAX,  METER_MIN,METER_MAX))
@@ -62,22 +64,22 @@ plt.xticks(np.arange(FEET_MIN, FEET_MAX, 1000))
 
 plt.xticks(np.arange(FEET_MIN,  FEET_MAX,  FEET_STEP))
 plt.yticks(np.arange(METER_MIN, METER_MAX, METER_STEP))
-plt.grid(visible=True, which='both')
+plt.grid(visible=True, which='both') # , linewidth = 1.0, color="y") # #808080")
 # plt.minorticks_on(); --- kills ?ticks !!!
 
 
 # Sektoren
 # https://matplotlib.org/stable/gallery/lines_bars_and_markers/categorical_variables.html#sphx-glr-gallery-lines-bars-and-markers-categorical-variables-py
-# https://www.w3schools.com/python/matplotlib_markers.asp
-plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r>', label="75kFT_2280m_Alb-Süd/Ost")
-plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b>', label="45kFT_1368_Alb-Nord")
+# https://www.w3schools.com/python/matplotlib_markers.asp                                     v magenta
+plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r<', markersize = 15, markeredgecolor = 'm', label="75kFT_2280m_Alb-Süd/Ost")
+plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b<', markersize = 12, markeredgecolor = 'm', label="45kFT_1368_Alb-Nord")
 # show labels in a legend
 # plt.legend()
 
 
 # Alb-S/O__
 Y_POS = FEET2METER  * FEET_ALB_SUED
-plt.annotate('_', xy=(FEET_ALB_SUED, Y_POS), xytext=(6500, Y_POS),
+plt.annotate('_', xy=(FEET_ALB_SUED-100, Y_POS), xytext=(6400, Y_POS),
             arrowprops={"facecolor": 'red', "shrink": 0.05} )
 # arrowprops=dict(facecolor='red', shrink=0.05))
 
