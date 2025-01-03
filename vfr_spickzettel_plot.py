@@ -2,6 +2,7 @@
 # =====================================================================
 # Karle3, 2025-01-02,
 # https://github.com/Karle3/vfr-spickzettel
+# https://github.com/Karle3/vfr-spickzettel/releases/tag/V2_4
 # =====================================================================
 
 """VFR Spickzettel (EDDS)."""
@@ -9,7 +10,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-VERSION = "2.4"
+VERSION = "2.5"
 DATE    = "2025-01-03"
 
 # https://matplotlib.org/
@@ -70,9 +71,11 @@ plt.grid(visible=True, which='both') # , linewidth = 1.0, color="y") # #808080")
 
 # Sektoren
 # https://matplotlib.org/stable/gallery/lines_bars_and_markers/categorical_variables.html#sphx-glr-gallery-lines-bars-and-markers-categorical-variables-py
-# https://www.w3schools.com/python/matplotlib_markers.asp                                     v magenta
-plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r<', markersize = 15, markeredgecolor = 'm', label="75kFT_2280m_Alb-Süd/Ost")
-plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b<', markersize = 12, markeredgecolor = 'm', label="45kFT_1368_Alb-Nord")
+# https://www.w3schools.com/python/matplotlib_markers.asp                          magenta -- v
+plt.plot(FEET_ALB_SUED, FEET_ALB_SUED * FEET2METER, 'r<', markersize = 15, markeredgecolor = 'm')
+   #, label="75kFT_2280m_Alb-Süd/Ost")
+plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b<', markersize = 12, markeredgecolor = 'm')
+   #, label="45kFT_1368_Alb-Nord")
 # show labels in a legend
 # plt.legend()
 
