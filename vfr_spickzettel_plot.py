@@ -60,8 +60,6 @@ plt.title('Sektoren, EDDS, Luftraum D: [m] <==> [ft] ')
 plt.xlabel('feet')
 plt.ylabel('meter')
 
-plt.xticks(np.arange(FEET_MIN, FEET_MAX, 1000))
-
 
 plt.xticks(np.arange(FEET_MIN,  FEET_MAX,  FEET_STEP))
 plt.yticks(np.arange(METER_MIN, METER_MAX, METER_STEP))
