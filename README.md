@@ -23,7 +23,7 @@ Running `vfr_spickzettel_plot.py` will create diagrams as 'vfr-spickzettel' in P
 
 ## VENV
 
-On running in a [virtual enviroment](https://docs.python.org/3/library/venv.html), see these steps:
+On running in a [virtual environment](https://docs.python.org/3/library/venv.html), see these steps:
 
 * `py -m venv .venv`
 * `.venv\Scripts\activate`
@@ -35,7 +35,7 @@ On running in a [virtual enviroment](https://docs.python.org/3/library/venv.html
 
 Then `pip freeze > requirements.txt` will create an appropriate dependency-file.
 
-In your (virtual) enviroment, just get all of them by `pip install -r requirements.txt` !
+In your (virtual) environment, just get all of them by `pip install -r requirements.txt` !
 
 ### WebLinks
 

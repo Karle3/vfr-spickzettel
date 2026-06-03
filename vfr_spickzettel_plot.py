@@ -10,8 +10,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-VERSION = "2.5"
-DATE    = "2025-01-03"
+VERSION = "2.6"
+DATE    = "2026-06-04"
+
+
+# VERSION = "2.5"
+# DATE    = "2025-01-03"
 
 # https://matplotlib.org/
 
@@ -94,6 +98,7 @@ plt.text(3500, 2000, 'Alb-Süd/Ost/West\nSchwarzwald/Hornberg:\n FL75 = 2286 m \
 		fontsize=15,
         bbox={'facecolor': 'red', 'alpha': 0.2, 'pad': 3})
 
+# Freq:
 # ; 130.740(R9)
 plt.text(4000, 600, '\
 - BordBord: 122.540/555 ; 130.430 \n\
@@ -103,6 +108,17 @@ plt.text(4000, 600, '\
 		fontsize=12, fontweight='bold',  family='monospace', # 'sans-serif'
         bbox={'facecolor': 'lightgreen', 'alpha': 0.8, 'pad': 2})
 
+# Transponder
+# https://www.fliegermagazin.de/wissen/transponder-einschalten/
+# https://www.fliegermagazin.de/wissen/welche-aircraft-squawk-codes-gibt-es/
+# https://einklich.net/flugfunk/funk.pdf
+plt.text(3200, 1530, '\
+Transponder Squawk:\n\
+- 7000: VFR\n\
+- 7600: Funkausfall\n\
+- 7700: Notfall',
+		fontsize=8, fontweight='bold',  family='monospace', # 'sans-serif'
+        bbox={'facecolor': 'lightgrey', 'alpha': 0.8, 'pad': 2})
 
 VER_STR = f"Karle3: v{VERSION:s}, {DATE:s}, www.edpj.de, \
  \nhttps://github.com/Karle3/vfr-spickzettel"
