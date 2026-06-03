@@ -95,14 +95,14 @@ plt.text(5400, 1250, 'Alb-Nord:  \n 4500 ft = 1372 m',
 #     style='italic',    bbox={'facecolor': 'blue', 'alpha': 0.5, 'pad': 0})
 
 plt.text(3500, 2000, 'Alb-Süd/Ost/West\nSchwarzwald/Hornberg:\n FL75 = 2286 m \n (@1013,25hPa)',
-		fontsize=15,
+		fontsize=12,
         bbox={'facecolor': 'red', 'alpha': 0.2, 'pad': 3})
 
 # Freq:
 # ; 130.740(R9)
 plt.text(4000, 600, '\
 - BordBord: 122.540/555 ; 130.430 \n\
-- Langen:   128.950 MHz (Einzelfreig.) \n\
+- Langen:   128.950 MHz (Einzelfreig.)\n\
 - Segelfl:  134.505 MHz (ED-R132) \n\
 - ATIS S:   126.125 MHz ',
 		fontsize=12, fontweight='bold',  family='monospace', # 'sans-serif'
@@ -117,7 +117,7 @@ Transponder Squawk:\n\
 - 7000: VFR\n\
 - 7600: Funkausfall\n\
 - 7700: Notfall',
-		fontsize=8, fontweight='bold',  family='monospace', # 'sans-serif'
+		fontsize=9, fontweight='bold',  family='monospace', # 'sans-serif'
         bbox={'facecolor': 'lightgrey', 'alpha': 0.8, 'pad': 2})
 
 VER_STR = f"Karle3: v{VERSION:s}, {DATE:s}, www.edpj.de, \
