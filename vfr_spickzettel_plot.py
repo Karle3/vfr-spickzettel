@@ -10,7 +10,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-VERSION = "2.6"
+VERSION = "2.6" # transponder
 DATE    = "2026-06-04"
 
 

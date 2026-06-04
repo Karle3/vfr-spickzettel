@@ -7,10 +7,10 @@ For details refer to [Arbeitskreis Sektoren](https://www.bwlv.de/verband-service
 
 ## Dependencies
 
-* [Python](https://www.python.org/) >= 3.9.0
+* [Python](https://www.python.org/) >= 3.13.x
 * packages:
-  * [numpy](https://numpy.org/), numpy-2.0.2,  see [w3schools.com](https://www.w3schools.com/python/numpy/default.asp)
-  * [matplotlib](https://matplotlib.org), matplotlib-3.9.4 and related packages, see [w3schools.com](https://www.w3schools.com/python/matplotlib_intro.asp)
+  * [numpy](https://numpy.org/), numpy-2.4.6,  see [w3schools.com](https://www.w3schools.com/python/numpy/default.asp)
+  * [matplotlib](https://matplotlib.org), matplotlib-3.10.9 and related packages, see [w3schools.com](https://www.w3schools.com/python/matplotlib_intro.asp)
 
 
 ## Run Script
