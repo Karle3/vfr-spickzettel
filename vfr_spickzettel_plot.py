@@ -2,7 +2,7 @@
 # =====================================================================
 # Karle3, 2025-01-02,
 # https://github.com/Karle3/vfr-spickzettel
-# https://github.com/Karle3/vfr-spickzettel/releases/tag/V2_4
+# https://github.com/Karle3/vfr-spickzettel/releases/tag/V2_7
 # =====================================================================
 
 """VFR Spickzettel (EDDS)."""
@@ -13,12 +13,10 @@ import matplotlib.pyplot as plt
 VERSION = "2.7" # boxes adjusted
 DATE    = "2026-06-04"
 
+# VERSION = "2.6" # transponder  # DATE    = "2026-06-04"
+# VERSION = "2.5"                # DATE    = "2025-01-03"
+# base : 2025-01-02
 
-VERSION = "2.6" # transponder
-DATE    = "2026-06-04"
-
-# VERSION = "2.5"
-# DATE    = "2025-01-03"
 
 # https://matplotlib.org/
 
