@@ -10,7 +10,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-VERSION = "3.1" # figure size increased to 1024 pixel with, font-sizes calculated, linted.
+VERSION = "3.1" # figure size increased to 1024 pixel width, font-sizes calculated, linted.
 DATE    = "2026-06-04"
 
 # VERSION = "2.7" # boxes adjusted DATE    = "2026-06-04"
@@ -48,9 +48,10 @@ fig_size=(FIG_SIZE_X * FIG_SIZE_FACTOR, FIG_SIZE_Y * FIG_SIZE_FACTOR) # inch
 # default DPI : 100
 DPI = 100
 # plot, get figure and axes
-fig, ax = plt.subplots(figsize=fig_size,  dpi=DPI)
+fig, ax = plt.subplots(figsize=fig_size, dpi=DPI)
+# adjust font sizes
 FONT_SIZE_NORMAL = 12 * FIG_SIZE_FACTOR
-FONT_SIZE_SMALL = 9 * FIG_SIZE_FACTOR
+FONT_SIZE_SMALL  =  9 * FIG_SIZE_FACTOR
 
 
 
