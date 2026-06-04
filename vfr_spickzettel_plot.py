@@ -10,7 +10,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-VERSION = "3.0" # figure size increased to 1024 pixel with, font-sizes calculated.
+VERSION = "3.1" # figure size increased to 1024 pixel with, font-sizes calculated, linted.
 DATE    = "2026-06-04"
 
 # VERSION = "2.7" # boxes adjusted DATE    = "2026-06-04"
@@ -41,16 +41,16 @@ FEET_ALB_NORD = 4500
 FEET_ALB_SUED = 7500
 
 # default figure size is 640x480, ratio = 1,333 == 4:3, at dpi = 100
-fig_size_factor = (1024.0/640.0)
-fig_size_x = 6.4 # inch
-fig_size_y = 4.8 # inch
-fig_size=(fig_size_x * fig_size_factor, fig_size_y * fig_size_factor) # inch
+FIG_SIZE_FACTOR = 1024.0/640.0 # figure target with shall be 1024 pixel.
+FIG_SIZE_X = 6.4 # inch
+FIG_SIZE_Y = 4.8 # inch
+fig_size=(FIG_SIZE_X * FIG_SIZE_FACTOR, FIG_SIZE_Y * FIG_SIZE_FACTOR) # inch
 # default DPI : 100
-dpi = 100
+DPI = 100
 # plot, get figure and axes
-fig, ax = plt.subplots(figsize=fig_size,  dpi=dpi)
-font_size_normal = 12 * fig_size_factor
-font_size_small = 9 * fig_size_factor
+fig, ax = plt.subplots(figsize=fig_size,  dpi=DPI)
+FONT_SIZE_NORMAL = 12 * FIG_SIZE_FACTOR
+FONT_SIZE_SMALL = 9 * FIG_SIZE_FACTOR
 
 
 
@@ -67,7 +67,7 @@ while FEET <= FEET_MAX:
         #                     ||    vv marker size
         ax.plot(FEET, METER, 'go',  ms = 8)
     # --- Annote value pairs in diagram.
-    ax.annotate(f"_{METER:.0f} m", xy=(FEET +80 , METER -5), fontsize=font_size_normal )
+    ax.annotate(f"_{METER:.0f} m", xy=(FEET +80 , METER -5), fontsize=FONT_SIZE_NORMAL )
     FEET += FEET_STEP
 
 plt.axis((FEET_MIN,FEET_MAX,  METER_MIN,METER_MAX))
@@ -79,8 +79,8 @@ plt.xlabel('feet')
 plt.ylabel('meter')
 
 # Add ticks to both axis.
-plt.xticks(np.arange(FEET_MIN,  FEET_MAX,  FEET_STEP),  fontsize=font_size_small)
-plt.yticks(np.arange(METER_MIN, METER_MAX, METER_STEP), fontsize=font_size_small)
+plt.xticks(np.arange(FEET_MIN,  FEET_MAX,  FEET_STEP),  fontsize=FONT_SIZE_SMALL)
+plt.yticks(np.arange(METER_MIN, METER_MAX, METER_STEP), fontsize=FONT_SIZE_SMALL)
 plt.grid(visible=True, which='both') # , linewidth = 1.0, color="y") # #808080")
 # plt.minorticks_on(); --- kills ?ticks !!!
 
@@ -98,7 +98,7 @@ plt.plot(FEET_ALB_NORD, FEET_ALB_NORD * FEET2METER, 'b>', markersize = 12, marke
 ## Alb-Nord:
 # https://matplotlib.org/stable/gallery/text_labels_and_annotations/text_commands.html#sphx-glr-gallery-text-labels-and-annotations-text-commands-py
 plt.text(5400, 1260, 'Alb-Nord:  \n 4500 ft = 1372 m',
-		fontsize=font_size_normal,
+		fontsize=FONT_SIZE_NORMAL,
         bbox={'facecolor': 'blue', 'alpha': 0.2, 'pad': 3})
 #     style='italic',    bbox={'facecolor': 'blue', 'alpha': 0.5, 'pad': 0})
 
@@ -110,7 +110,7 @@ plt.annotate('---', xy=(FEET_ALB_SUED-100, Y_POS), xytext=(6400, Y_POS+10),
 # arrowprops=dict(facecolor='red', shrink=0.05))
 # add box
 plt.text(4000+30, 2065, 'Alb-Süd/Ost/West\nSchwarzwald/Hornberg:\n FL75 = 2286 m \n (@1013,25hPa)',
-		fontsize=font_size_normal,
+		fontsize=FONT_SIZE_NORMAL,
         bbox={'facecolor': 'red', 'alpha': 0.2, 'pad': 2})
 
 # Freq:
@@ -120,7 +120,7 @@ plt.text(4000+30, 580, '\
 - Langen:   128.950 MHz (Einzelfreig.)\n\
 - Segelfl:  134.505 MHz (ED-R132) \n\
 - ATIS S:   126.125 MHz ',
-		fontsize=font_size_normal, fontweight='bold',  family='monospace', # 'sans-serif'
+		fontsize=FONT_SIZE_NORMAL, fontweight='bold',  family='monospace', # 'sans-serif'
         bbox={'facecolor': 'lightgreen', 'alpha': 0.8, 'pad': 2})
 
 # Transponder
@@ -132,7 +132,7 @@ Transponder Squawk:\n\
 - 7000: VFR\n\
 - 7600: Funkausfall\n\
 - 7700: Notfall',
-		fontsize=font_size_small, fontweight='bold',  family='monospace', # 'sans-serif'
+		fontsize=FONT_SIZE_SMALL, fontweight='bold',  family='monospace', # 'sans-serif'
         bbox={'facecolor': 'lightgrey', 'alpha': 0.8, 'pad': 2})
 
 # Version as side bar
@@ -140,7 +140,7 @@ VER_STR = f"Karle3: v{VERSION:s}, {DATE:s}, edpj.de, \
  \nhttps://github.com/Karle3/vfr-spickzettel"
 plt.text(8500, 600, \
 VER_STR,
- fontsize=font_size_small,
+ fontsize=FONT_SIZE_SMALL,
  rotation=90,
  bbox={ 'facecolor': 'lightblue', 'pad': 5 }
 )
