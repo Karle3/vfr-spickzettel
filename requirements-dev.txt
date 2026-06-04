@@ -1,7 +1,6 @@
 astroid==4.0.4
 colorama==0.4.6
 dill==0.4.1
-
 isort==8.0.1
 mccabe==0.7.0
 platformdirs==4.10.0

@@ -25,7 +25,7 @@ Running `vfr_spickzettel_plot.py` will create diagrams as 'vfr-spickzettel' in P
 
 On running in a [virtual environment](https://docs.python.org/3/library/venv.html), see these steps:
 
-* `py -m venv .venv`
+* `python -m venv .venv`
 * `.venv\Scripts\activate`
 * recommended: `py -m pip install --upgrade pip`
 
@@ -43,5 +43,22 @@ In your (virtual) environment, just get all of them by `pip install -r requireme
 * [python:installing-using-pip-and-virtual-environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
 
 
+## Development
+
+While development additional packages are recommended,
+therefore apply `pip install -r requirements-dev.txt` to achive **pylint**.
+Note, some warning had been justified in the code, no `.pylintrc` is used yet.
+
+### pyLint
+
+See also [project page](https://pylint.org/) and  [tutorial](https://pylint.readthedocs.io/en/stable/tutorial.html).
+
+Just run in your (virtual) environment:
+
+    pylint vfr_spickzettel_plot.py
+
+and expect no warnings like
+
+    Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
 ---eof
