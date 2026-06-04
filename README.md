@@ -61,4 +61,14 @@ and expect no warnings like
 
     Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
+
+## Workflow
+
+After tagging on CLI, a release is created out of the related
+[TAG](https://github.com/Karle3/vfr-spickzettel/tags)
+at
+[GitHub:Actions:workflows](https://github.com/Karle3/vfr-spickzettel/actions/workflows/pages/pages-build-deployment).
+
+The result is [automatically](https://github.com/Karle3/vfr-spickzettel/deployments/github-pages) deploid to [GH-pages](https://karle3.github.io/vfr-spickzettel/).
+
 ---eof
